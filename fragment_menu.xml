@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@+id/include"
+    android:id="@+id/fragmentMenu"
+    android:background="@color/black"
+    tools:context=".MenuFragment">
+
+    <ImageView
+        android:id="@+id/backgroundTile"
+        android:layout_width="match_parent"
+        android:layout_height="526dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <ImageView
+        android:id="@+id/backgroundGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundTile"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button1"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundGetStarted"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/backgroundDevices"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintStart_toStartOf="@+id/buttonGetStarted"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGetStarted"  />
+
+    <Button
+        android:id="@+id/buttonDevices"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Devices"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button2"
+        app:layout_constraintStart_toStartOf="@+id/buttonGetStarted"
+        app:layout_constraintTop_toTopOf="@+id/backgroundDevices" />
+
+    <ImageView
+        android:id="@+id/backgroundSupport"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintStart_toStartOf="@+id/buttonDevices"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDevices"  />
+
+    <Button
+        android:id="@+id/buttonSupport"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Support"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button3"
+        app:layout_constraintStart_toStartOf="@+id/buttonDevices"
+        app:layout_constraintTop_toTopOf="@+id/backgroundSupport"
+        tools:ignore="UnknownId" />
+
+    <ImageView
+        android:id="@+id/backgroundPurchase"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintStart_toStartOf="@+id/buttonSupport"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSupport"  />
+
+    <Button
+        android:id="@+id/buttonPurchase"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Purchase"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button4"
+        app:layout_constraintStart_toStartOf="@+id/buttonSupport"
+        app:layout_constraintTop_toTopOf="@+id/backgroundPurchase" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

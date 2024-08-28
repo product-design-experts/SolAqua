@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:id="@+id/fragmentInstall"
+    tools:context=".InstallFragment">
+
+    <!--     Initialization Screen    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+<!--        <TextView-->
+<!--            android:id="@+id/textTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/kallistomedium"-->
+<!--            android:text="solaqua"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="44sp"-->
+<!--            android:textStyle="bold" />-->
+
+        <TextView
+            android:id="@+id/textInit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-160dp"
+            android:fontFamily="@font/kallistomedium"
+            android:text="Accessing Device"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit2"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="Please be patient"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit3"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="If this is a new device, it"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit4"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="may take several minutes"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit5"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="Do Not remove from pool"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textWarning"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/kallistomedium"
+            android:text="Device is Not Available"
+            android:textSize="20sp"
+            android:maxLines="5"
+            android:textColor="@color/accent"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

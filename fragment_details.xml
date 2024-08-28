@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@+id/include"
+    android:id="@+id/fragmentDevice"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    tools:context=".DetailsFragment">
+
+    <ImageView
+        android:id="@+id/imageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <TextView
+        android:id="@+id/titleDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Device Information"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBatteryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart = "28dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Battery = "
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTitle" />
+
+    <TextView
+        android:id="@+id/textBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart = "2dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text=""
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textBatteryLabel"
+        app:layout_constraintTop_toTopOf="@+id/textBatteryLabel" />
+
+    <TextView
+        android:id="@+id/textTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart = "28dp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Water Temp ="
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBattery" />
+
+    <TextView
+        android:id="@+id/textTargetTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart = "28dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Target Temp = "
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTemp" />
+
+    <ListView
+        android:id="@+id/listTempMax"
+        android:layout_width="88dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="-35dp"
+        android:textSize="38dp"
+        android:fontFamily="@font/kallistomedium"
+        android:choiceMode="singleChoice"
+        app:layout_constraintStart_toEndOf="@id/textTargetTemp"
+        app:layout_constraintBottom_toBottomOf="@+id/textTargetTemp" />
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toEndOf="@id/textTargetTemp"
+        app:layout_constraintTop_toTopOf="@+id/listTempMax"/>
+
+    <ImageView
+        android:id="@+id/scrollBottom"
+        android:layout_width="92dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toEndOf="@id/textTargetTemp"
+        app:layout_constraintBottom_toBottomOf="@+id/listTempMax"/>
+
+    <ImageView
+        android:id="@+id/selectBox"
+        android:layout_width="92dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintStart_toEndOf="@id/textTargetTemp"
+        app:layout_constraintBottom_toBottomOf="@+id/textTargetTemp"
+        app:srcCompat="@drawable/capsule"/>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Send"
+        android:textColor="@color/ltgrey"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/selectBox"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textSend"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Press to Send to device"
+        android:textSize="20sp"
+        android:maxLines="5"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollBottom" />
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Data refreshed"
+        android:textSize="20sp"
+        android:maxLines="5"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollBottom" />
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonReturn"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginTop="564dp"-->
+<!--        android:background="@drawable/icon_arrow"-->
+<!--        android:backgroundTint="@color/accent"-->
+<!--        android:onClick="submitbuttonHandler"-->
+<!--        android:textColor="@color/ltgrey"-->
+<!--        android:textSize="20sp"-->
+<!--        android:contentDescription="Return1"-->
+<!--        android:gravity="bottom"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonRefresh"-->
+<!--        android:layout_width="52dp"-->
+<!--        android:layout_height="52dp"-->
+<!--        android:layout_marginTop="564dp"-->
+<!--        android:background="@drawable/icon_refresh"-->
+<!--        android:backgroundTint="@color/accent"-->
+<!--        android:onClick="submitbuttonHandler"-->
+<!--        android:textColor="@color/ltgrey"-->
+<!--        android:textSize="20sp"-->
+<!--        android:contentDescription="Return1"-->
+<!--        android:gravity="bottom"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonHome"-->
+<!--        android:layout_width="64dp"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:layout_marginEnd="28dp"-->
+<!--        android:layout_marginTop="564dp"-->
+<!--        android:background="@drawable/icon_home"-->
+<!--        android:backgroundTint="@color/accent"-->
+<!--        android:onClick="submitbuttonHandler"-->
+<!--        android:textColor="@color/ltgrey"-->
+<!--        android:textSize="20sp"-->
+<!--        android:contentDescription="Return2"-->
+<!--        android:gravity="bottom"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/background_bottom_bar"
+        app:itemIconTint="@color/accent"
+        app:menu="@menu/bottom_navbar"
+        app:itemIconSize="52dp"
+        app:itemTextColor="#DADADA"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

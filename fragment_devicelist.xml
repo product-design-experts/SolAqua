@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@+id/include"
+    android:id="@+id/fragmentHome"
+    android:background="@color/black"
+    tools:context=".DeviceListFragment">
+
+
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Device List"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tile"
+        android:background="@drawable/capsule"
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleHome" />
+
+    <TextView
+        android:id="@+id/textSearching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text="Searching for solaqua devices..."
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHome" />
+
+    <ProgressBar
+        android:id="@+id/spinnerSearching"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_marginTop="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSearching" />
+
+    <ImageView
+        android:id="@+id/backgroundDevice1"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHome"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonDevice1"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button1"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHome"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+         android:id="@+id/backgroundDevice2"
+         android:layout_width="match_parent"
+         android:layout_height="74dp"
+         android:layout_marginStart="64dp"
+         android:layout_marginTop="20dp"
+         android:layout_marginEnd="64dp"
+         android:background="@drawable/select_button"
+         android:backgroundTint="@color/accent"
+         app:layout_constraintStart_toStartOf="@+id/buttonDevice1"
+         app:layout_constraintTop_toBottomOf="@+id/buttonDevice1"  />
+
+     <Button
+         android:id="@+id/buttonDevice2"
+         android:layout_width="match_parent"
+         android:layout_height="74dp"
+         android:layout_marginStart="24dp"
+         android:layout_marginTop="20dp"
+         android:layout_marginEnd="24dp"
+         android:background="@android:color/transparent"
+         android:onClick="submitbuttonHandler"
+         android:fontFamily="@font/kallistomedium"
+         android:text=""
+         android:textColor="@color/white"
+         android:textSize="24sp"
+         android:textAllCaps="false"
+         android:contentDescription="Button2"
+         app:layout_constraintStart_toStartOf="@+id/buttonDevice1"
+         app:layout_constraintTop_toBottomOf="@+id/buttonDevice1" />
+
+    <ImageView
+        android:id="@+id/backgroundDevice3"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintStart_toStartOf="@+id/buttonDevice2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDevice2"  />
+
+    <Button
+        android:id="@+id/buttonDevice3"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button3"
+        app:layout_constraintStart_toStartOf="@+id/buttonDevice2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDevice2" />
+
+    <ImageView
+        android:id="@+id/backgroundDevice4"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        app:layout_constraintStart_toStartOf="@+id/buttonDevice3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDevice3"  />
+
+    <Button
+        android:id="@+id/buttonDevice4"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:contentDescription="Button4"
+        app:layout_constraintStart_toStartOf="@+id/buttonDevice3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDevice3" />
+
+    <TextView
+        android:id="@+id/textReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tile" />
+
+    <TextView
+        android:id="@+id/textReset2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/kallistomedium"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textReset" />
+
+    <Button
+        android:id="@+id/buttonReScan"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="-16dp"
+        android:background="@drawable/select_button"
+        android:backgroundTint="@color/accent"
+        android:onClick="submitbuttonHandler"
+        android:fontFamily="@font/kallistomedium"
+        android:text="ReScan"
+        android:textColor="@color/ltgrey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textReset2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/background_bottom_bar"
+        app:itemIconTint="@color/accent"
+        app:menu="@menu/bottom_navbar"
+        app:itemIconSize="52dp"
+        app:itemTextColor="#DADADA"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--     Initialization Screen    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+<!--        <TextView-->
+<!--            android:id="@+id/textInit1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/kallistomedium"-->
+<!--            android:text="solaqua"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="44sp"-->
+<!--            android:textStyle="bold" />-->
+        <TextView
+            android:id="@+id/textInit2"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="Please be patient"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit3"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="If this is a new device, the initial set-up"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit4"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="may take several minutes"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textInit5"
+            android:layout_width="240dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/kallistomedium"
+            android:gravity="center"
+            android:text="Do Not remove from pool"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
